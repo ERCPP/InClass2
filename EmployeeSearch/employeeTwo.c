@@ -1,7 +1,7 @@
 #include <string.h>
 #include "employee.h"
 
-static PtrToEmployee searchEmployeeTable(PtrToConstEmployee ptr. int tableSize, const void *targetPtr, int (*functionPtr)(const void *, PtrToConstEmployee)) {
+static PtrToEmployee searchEmployeeTable(PtrToConstEmployee ptr, int tableSize, const void *targetPtr, int (*functionPtr)(const void *, PtrToConstEmployee)) {
     PtrToConstEmployee endPtr = ptr + tableSize;
     for(; ptr < endPtr; ptr++) {
         if ((*functionPtr)(targetPtr, ptr) == 0)
